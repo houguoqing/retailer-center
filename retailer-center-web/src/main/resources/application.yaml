@@ -1,0 +1,10 @@
+server:
+  port: 8100
+dubbo:
+  application:
+    name: retailer-center-web
+  registry:
+    protocol: zookeeper
+    address: 127.0.0.1
+    port: 2181
+    timeout: 3000
