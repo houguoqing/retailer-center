@@ -16,7 +16,7 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/retailer-center?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
     username: root
     password: root
-    driver-class-name: com.alibaba.druid.proxy.DruidDriver
+    driver-class-name: com.mysql.jdbc.Driver
     druid:
       #配置初始化大小、最小、最大
       initial-size: 1

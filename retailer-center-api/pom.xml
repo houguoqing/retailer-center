@@ -10,6 +10,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>retailer-center-api</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.kkb</groupId>
+            <artifactId>retailer-center-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
