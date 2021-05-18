@@ -1,5 +1,7 @@
 package com.kkb.retailer.center.server.service;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.kkb.retailer.center.api.UserInfoService;
 import com.kkb.retailer.center.common.pojo.UserInfo;
 import com.kkb.retailer.center.server.mappers.UserInfoMapper;
@@ -31,5 +33,13 @@ public class UserInfoImpl implements UserInfoService {
     @Override
     public int deleteUserInfo(Long id) {
         return userInfoMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public PageInfo<UserInfo> getUserInfoPage(Integer pageNo, Integer pageSize) {
+        PageHelper.startPage(pageNo,pageSize);
+        List<UserInfo> userInfos = userInfoMapper.selectAll();
+        PageInfo<UserInfo> pageInfo = new PageInfo<>(userInfos);
+        return pageInfo;
     }
 }

@@ -1,5 +1,6 @@
 package com.kkb.retailercenter.controller;
 
+import com.github.pagehelper.PageInfo;
 import com.kkb.retailer.center.api.UserInfoService;
 import com.kkb.retailer.center.common.pojo.UserInfo;
 import org.apache.dubbo.config.annotation.Reference;
@@ -52,5 +53,11 @@ public class UserInfoController {
     @DeleteMapping("/delUserById/{id}")
     public int deleteUserInfo(@PathVariable Long id){
         return userInfoService.deleteUserInfo(id);
+    }
+
+    @GetMapping("/userList")
+    public PageInfo<UserInfo> getPageInfo(@RequestParam(value="page",defaultValue="1") int pageNo,
+                                          @RequestParam(value="pageSize",defaultValue="10")int pageSize){
+        return userInfoService.getUserInfoPage(pageNo,pageSize);
     }
 }

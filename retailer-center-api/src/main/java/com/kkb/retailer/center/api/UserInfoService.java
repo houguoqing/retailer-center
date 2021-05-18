@@ -1,4 +1,5 @@
 package com.kkb.retailer.center.api;
+import com.github.pagehelper.PageInfo;
 import com.kkb.retailer.center.common.pojo.UserInfo;
 import java.util.List;
 
@@ -10,4 +11,6 @@ public interface UserInfoService {
     int updateUserInfo(UserInfo userInfo);
 
     int deleteUserInfo(Long id);
+
+    PageInfo<UserInfo> getUserInfoPage(Integer pageNo, Integer pageNum);
 }
