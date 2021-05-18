@@ -5,4 +5,5 @@ import com.kkb.retailer.center.common.pojo.UserInfo;
 import com.kkb.retailer.center.server.mapper.BaseMapper;
 
 public interface UserInfoMapper extends BaseMapper<UserInfo> {
+
 }

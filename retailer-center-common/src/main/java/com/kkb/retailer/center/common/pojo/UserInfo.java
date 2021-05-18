@@ -17,14 +17,14 @@ import java.util.List;
 public class UserInfo extends BaseEntity{
 
 
-    private String userName;
+    private String user_name;
 
-    private String userPassword;
+    private String user_password;
 
     private String description;
 
     private Byte type;
 
-    private Long shopId;
+    private Long shop_id;
 
 }

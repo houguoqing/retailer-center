@@ -48,4 +48,6 @@ spring:
       #检测时:
       #1.如果连接空闲并且超过minIdle以外的连接，如果空闲时间超过minEvictableIdleTimeMillis设置的值则直接物理关闭。
       #2.在minIdle以内的不处理。
-
+logging:
+  level:
+    com.kkb.retailer.center.server.mapper: debug
