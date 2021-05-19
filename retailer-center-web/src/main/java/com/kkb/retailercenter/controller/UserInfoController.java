@@ -2,6 +2,7 @@ package com.kkb.retailercenter.controller;
 
 import com.github.pagehelper.PageInfo;
 import com.kkb.retailer.center.api.UserInfoService;
+import com.kkb.retailer.center.common.http.HttpResult;
 import com.kkb.retailer.center.common.pojo.UserInfo;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.web.bind.annotation.*;
@@ -56,8 +57,9 @@ public class UserInfoController {
     }
 
     @GetMapping("/userList")
-    public PageInfo<UserInfo> getPageInfo(@RequestParam(value="page",defaultValue="1") int pageNo,
+    public HttpResult<Object> getPageInfo(@RequestParam(value="page",defaultValue="1") int pageNo,
                                           @RequestParam(value="pageSize",defaultValue="10")int pageSize){
-        return userInfoService.getUserInfoPage(pageNo,pageSize);
+        PageInfo<UserInfo> pageInfo = userInfoService.getUserInfoPage(pageNo,pageSize);
+        return HttpResult.success(pageInfo);
     }
 }
