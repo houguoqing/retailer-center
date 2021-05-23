@@ -1,4 +1,4 @@
-package com.kkb.retailercenter.handlers;
+package com.kkb.retailer.center.handlers;
 
 import com.kkb.retailer.center.common.http.DefinitionException;
 import com.kkb.retailer.center.common.http.HttpResult;
